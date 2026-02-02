@@ -207,6 +207,13 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Before Config Changes
+
+**Always check documentation first** before patching `openclaw.json`:
+1. Read relevant section in `openclaw-docs/gateway/configuration.md`
+2. Or run `gateway config.schema` to see valid structure
+3. Don't assume patterns are consistent across sections (e.g., `agents.list` vs `skills.entries`)
+
 ## System Changes
 
 **Always update `SETUP.md`** when making:
