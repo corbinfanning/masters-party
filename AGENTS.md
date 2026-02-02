@@ -207,6 +207,17 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## System Changes
+
+**Always update `SETUP.md`** when making:
+- Environment variable changes (.zshrc)
+- OpenClaw config changes (openclaw.json)
+- New tool installations (pip, npm, brew)
+- New skills or scripts
+- Cron job additions/changes
+
+Then commit the changes to git. This ensures the setup is reproducible on a new machine.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
