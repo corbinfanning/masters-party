@@ -75,6 +75,23 @@ The config lives at `~/.openclaw/openclaw.json`. Key sections to configure:
 }
 ```
 
+### Agent Identity (Avatar)
+```json
+{
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "identity": {
+          "name": "Jane",
+          "avatar": "assets/avatar/jane-avatar.png"
+        }
+      }
+    ]
+  }
+}
+```
+
 ### Brave Search
 ```json
 {
