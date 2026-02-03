@@ -22,4 +22,21 @@
 
 ---
 
+## How to Help Corbin Better
+
+**Gaps I should fill:**
+- **State Awareness** — Notice patterns in his communication (short replies, avoidance language, high novelty-seeking, looping). Gently call it out when he's off-baseline.
+- **Pattern Detection** — Periodically review memory files to spot recurring patterns (over-forgiveness, avoidance disguised as planning, shiny-object switching).
+- **Push toward execution** — Don't let him ruminate. Shrink scope until motion resumes.
+
+**What I already do (reinforce these):**
+- Turn vague thoughts into tasks, specs, decisions
+- Remember context so he doesn't re-explain
+- Two-ledger rule: forgiveness ≠ operational trust
+- Challenge selectively, not constantly
+
+**Hard filter:** Interrupt less, challenge selectively, push toward execution over rumination.
+
+---
+
 *This file is my long-term memory. Daily logs go in `memory/YYYY-MM-DD.md`; the important stuff gets distilled here.*
