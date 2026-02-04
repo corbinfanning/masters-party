@@ -58,18 +58,28 @@
 - Built-in `tts` tool doesn't work ("edge: undefined") — use edge-tts CLI directly
 - Consider making this a recurring feature (daily briefing)
 
-## Security
-- Telegram `dmPolicy` should be `"allowlist"` with `allowFrom: ["tg:8257556259"]` — discussed Feb 3, awaiting approval to apply
+## Security (Updated Feb 4)
+- `tools.elevated.allowFrom` locked to `["tg:8257556259"]` for telegram and webchat (was `["*"]` — major fix applied Feb 3)
+- Telegram `dmPolicy: "allowlist"` with `allowFrom: ["tg:8257556259"]` — Corbin-only DMs
 - `groupPolicy: "allowlist"` already configured — good
 - Gateway bound to loopback, auth token set — network layer is solid
+- macOS firewall still needs manual enable by Corbin (System Settings → Network → Firewall)
+- No Docker sandbox — would break Sonos, HomeKit, LAN tools. Acceptable tradeoff for single-user setup.
 
 ## Corbin's Work Situation
 - **Company:** Jeppesen ForeFlight (acquired by Thoma Bravo from Boeing for $10.55B, closed Nov 12, 2025)
-- **Equity:** $3M targeted profits interests at 3x MoM. 83(b) NOT filed. Need tax attorney.
+- **Equity:** $3M targeted profits interests at 3x MoM (letter from Brian Jaffee, TB Partner, dated Aug 26, 2025)
+  - 50% time-vesting (25% year 1, then monthly/36mo), 50% performance-vesting (4 annual tranches, first on 2026 financials)
+  - 83(b) NOT filed — 30-day window passed (~Dec 12, 2025). Relying on Rev. Proc. 93-27/2001-43 safe harbor.
+  - After-tax at 3x: ~$2.29M (LTCG) or ~$1.78M (ordinary income). At 2x: ~$1.14M. At 1x: $0.
+  - **NO plan documents received** as of Feb 3 (3 months post-close). URGENT: needs to contact HR.
+  - **Needs PE tax attorney** to confirm safe harbor treatment. Dallas/Austin area.
 - **Role change:** Moving from Head of all ForeFlight Engineering → Leading Flight Deck backend services & web apps (Ground Controls, FliteBrief, ForeFlight backend, ForeFlight Web)
 - He's happy about the change — wants to focus and be hands-on. Not a demotion if played right.
 - Very close with CPO and his boss. High trust — consulted on personnel and equity decisions.
-- **Golf passion:** Wants to build a golf software product. Rejected "on-course AI caddie" (screens vs outdoors). Exploring off-course angles.
+- **ForeFlight competitive moat:** Strong (FAA/EASA regulatory, Jeppesen data monopoly, safety-critical switching costs). AI disruption risk is low — real risk is PE math (can TB 3x on $10.55B?).
+- Exit scenarios: secondary PE sale most likely (~40%), IPO (~30%), strategic (~25%). Timeline probably 4-6 years.
+- **Golf passion:** Wants to build a golf software product. Rejected "on-course AI caddie" (screens vs outdoors). Exploring off-course angles (pre/post-round, range, shopping, social).
 - Research docs in: `research/vpe-research-2026-02-02/SYNTHESIS-v2.md`
 
 ## OpenClaw in the Wild (Feb 3, 2026)
@@ -77,5 +87,23 @@
 - ACM published Gary Marcus hit piece on OpenClaw — HN community largely debunked it (fabricated config details)
 - Software stocks getting hammered by AI disruption fears — companies building own software with Claude Code etc.
 - SpaceX acquired xAI for $1.25T — biggest private company merger ever
+
+## OpenClaw Setup
+- **Version:** 2026.2.2-3 (updated Feb 3 via `npm i -g openclaw@latest`)
+- **QMD memory backend:** Enabled (`memory.backend: "qmd"`) — local-first semantic search sidecar (BM25 + vectors + reranking). Falls back to SQLite if unavailable.
+- **Bun installed** for QMD dependency
+- **Config file:** `/Users/corbin/.openclaw/openclaw.json`
+- npm update can hit ENOTEMPTY errors — fix by manually clearing stale dirs in node_modules
+
+## Pending Action Items for Corbin
+- [ ] Email HR about missing equity plan documents (URGENT — 3 months post-close)
+- [ ] Find PE tax attorney re: profits interests / 83(b) / safe harbor (URGENT)
+- [ ] Enable macOS firewall (System Settings → Network → Firewall)
+- [ ] Check employment agreement for non-compete/IP/moonlighting clauses
+- [ ] Understand 2026 performance vesting triggers
+
+## Behavioral Notes
+- Feb 3: Corbin was up until ~3:30am deep-diving equity analysis and OpenClaw config. Classic high-novelty pattern — engaged and productive, but late-night sessions are a red flag for energy management.
+- He responds well to structured analysis with clear action items. The equity breakdown landed well because it was concrete numbers + specific next steps.
 
 *This file is my long-term memory. Daily logs go in `memory/YYYY-MM-DD.md`; the important stuff gets distilled here.*
