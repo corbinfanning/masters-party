@@ -65,8 +65,9 @@ You're in a unique position: **Thoma Bravo paid you $3M to execute their playboo
 ## Technical Transformation Reality Check
 
 ### IL5 Migration
-- **Timeline:** 18-36 months (FedRAMP High first, then IL5 controls)
-- **Cost:** $1.5-4.5M initial, $500K-1M/year ongoing
+- **Platform:** Using SecondFront (Game Warden) — pre-authorized IL5 platform
+- **Timeline:** Likely 6-12 months (vs 18-36 if building from scratch) since you inherit their ATO
+- **Cost:** Platform licensing + integration work (less than DIY infrastructure build)
 - **Critical constraint:** Only US citizens can access IL5 environments. Denmark team is completely blocked.
 - **This actually simplifies things:** US team on government track, Denmark on commercial.
 

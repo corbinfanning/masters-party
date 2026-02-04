@@ -52,4 +52,21 @@
 
 ---
 
+## Audio Briefings
+- Corbin likes receiving voice briefings via Telegram — news, HN, markets, weather
+- **TTS workflow:** Write text → `/Users/corbin/Library/Python/3.9/bin/edge-tts` (AndrewNeural voice) → MP3 → ffmpeg → OGG opus → send via message tool (asVoice: true)
+- Built-in `tts` tool doesn't work ("edge: undefined") — use edge-tts CLI directly
+- Consider making this a recurring feature (daily briefing)
+
+## Security
+- Telegram `dmPolicy` should be `"allowlist"` with `allowFrom: ["tg:8257556259"]` — discussed Feb 3, awaiting approval to apply
+- `groupPolicy: "allowlist"` already configured — good
+- Gateway bound to loopback, auth token set — network layer is solid
+
+## OpenClaw in the Wild (Feb 3, 2026)
+- Agent Skills / ClawHub hit HN front page (325 upvotes)
+- ACM published Gary Marcus hit piece on OpenClaw — HN community largely debunked it (fabricated config details)
+- Software stocks getting hammered by AI disruption fears — companies building own software with Claude Code etc.
+- SpaceX acquired xAI for $1.25T — biggest private company merger ever
+
 *This file is my long-term memory. Daily logs go in `memory/YYYY-MM-DD.md`; the important stuff gets distilled here.*
