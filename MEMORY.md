@@ -63,6 +63,15 @@
 - `groupPolicy: "allowlist"` already configured — good
 - Gateway bound to loopback, auth token set — network layer is solid
 
+## Corbin's Work Situation
+- **Company:** Jeppesen ForeFlight (acquired by Thoma Bravo from Boeing for $10.55B, closed Nov 12, 2025)
+- **Equity:** $3M targeted profits interests at 3x MoM. 83(b) NOT filed. Need tax attorney.
+- **Role change:** Moving from Head of all ForeFlight Engineering → Leading Flight Deck backend services & web apps (Ground Controls, FliteBrief, ForeFlight backend, ForeFlight Web)
+- He's happy about the change — wants to focus and be hands-on. Not a demotion if played right.
+- Very close with CPO and his boss. High trust — consulted on personnel and equity decisions.
+- **Golf passion:** Wants to build a golf software product. Rejected "on-course AI caddie" (screens vs outdoors). Exploring off-course angles.
+- Research docs in: `research/vpe-research-2026-02-02/SYNTHESIS-v2.md`
+
 ## OpenClaw in the Wild (Feb 3, 2026)
 - Agent Skills / ClawHub hit HN front page (325 upvotes)
 - ACM published Gary Marcus hit piece on OpenClaw — HN community largely debunked it (fabricated config details)
