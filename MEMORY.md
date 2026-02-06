@@ -103,6 +103,10 @@
 - **Config file:** `/Users/corbin/.openclaw/openclaw.json`
 - npm update can hit ENOTEMPTY errors — fix by manually clearing stale dirs in node_modules
 
+## Location
+- **Home:** 6409 Zadock Woods Dr, Austin, TX
+- **Weather/activities:** Use Austin, TX for all location-based suggestions
+
 ## Assets & Domains
 - **corbinfanning.com** — registered at Namecheap, currently unused. Potential uses: personal site, golf product landing page, portfolio.
 
