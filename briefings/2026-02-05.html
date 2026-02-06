@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing — Feb 5, 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      margin: 0;
+      padding: 16px;
+      line-height: 1.5;
+    }
+    h1 { 
+      font-size: 1.5rem; 
+      margin: 0 0 4px 0;
+      color: #fff;
+    }
+    .date { 
+      color: #8b949e; 
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      color: #58a6ff;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 8px;
+      margin: 24px 0 16px 0;
+    }
+    .weather-current {
+      background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .temp-big {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .weather-meta {
+      color: #8b949e;
+      font-size: 0.85rem;
+    }
+    .forecast {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+    .day {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 8px 4px;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+    .day-name { color: #8b949e; }
+    .day-hi { color: #f0883e; font-weight: 600; }
+    .day-lo { color: #58a6ff; }
+    .story {
+      padding: 10px 0;
+      border-bottom: 1px solid #21262d;
+    }
+    .story:last-child { border-bottom: none; }
+    .story a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .story a:hover { color: #58a6ff; }
+    .story-meta {
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin-top: 4px;
+    }
+    .story-meta a { color: #8b949e; font-weight: normal; }
+    .score { color: #f0883e; }
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #21262d;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-item h3 {
+      margin: 0 0 6px 0;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .news-item h3 a {
+      color: #e6edf3;
+      text-decoration: none;
+    }
+    .news-item p {
+      margin: 0;
+      color: #8b949e;
+      font-size: 0.85rem;
+    }
+    .source { 
+      color: #6e7681; 
+      font-size: 0.75rem; 
+    }
+    .alert-box {
+      background: linear-gradient(135deg, #3d1a1a 0%, #1a1a1a 100%);
+      border: 1px solid #f85149;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 8px 0;
+    }
+    .alert-box h3 {
+      color: #f85149;
+      margin: 0 0 8px 0;
+      font-size: 0.9rem;
+    }
+    .alert-box a { color: #ff7b72; }
+    .emoji { margin-right: 6px; }
+    .muted { color: #6e7681; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>☀️ Good Morning</h1>
+  <div class="date">Thursday, February 5, 2026 — 7:00 AM CST</div>
+
+  <h2>🌡️ Weather — Dallas</h2>
+  <div class="weather-current">
+    <div class="temp-big">35°F</div>
+    <div class="weather-meta">☀️ Clear · Humidity 91% · Wind 6 mph</div>
+  </div>
+  
+  <div class="forecast">
+    <div class="day">
+      <div class="day-name">Thu</div>
+      <div class="day-hi">68°</div>
+      <div class="day-lo">35°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Fri</div>
+      <div class="day-hi">78°</div>
+      <div class="day-lo">42°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Sat</div>
+      <div class="day-hi">68°</div>
+      <div class="day-lo">51°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Sun</div>
+      <div class="day-hi">74°</div>
+      <div class="day-lo">55°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Mon</div>
+      <div class="day-hi">74°</div>
+      <div class="day-lo">61°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Tue</div>
+      <div class="day-hi">68°</div>
+      <div class="day-lo">61°</div>
+    </div>
+    <div class="day">
+      <div class="day-name">Wed</div>
+      <div class="day-hi">80°</div>
+      <div class="day-lo">60°</div>
+    </div>
+  </div>
+  <p class="weather-meta" style="margin-top:8px">Warming trend through the week. Possible light rain Tue-Wed.</p>
+
+  <h2>🔥 Hacker News — Top 10</h2>
+  
+  <div class="story">
+    <a href="https://blog.comma.ai/datacenter/">Don't Rent the Cloud, Own Instead</a>
+    <div class="story-meta"><span class="score">447 pts</span> · <a href="https://news.ycombinator.com/item?id=46896146">191 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://nmn.gl/blog/ai-killing-b2b-saas">AI Is Killing B2B SaaS</a>
+    <div class="story-meta"><span class="score">380 pts</span> · <a href="https://news.ycombinator.com/item?id=46888441">592 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been">OpenClaw Is What Apple Intelligence Should Have Been</a>
+    <div class="story-meta"><span class="score">368 pts</span> · <a href="https://news.ycombinator.com/item?id=46893970">303 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://pdfa.org/a-case-study-in-pdf-forensics-the-epstein-pdfs/">A Case Study in PDF Forensics: The Epstein PDFs</a>
+    <div class="story-meta"><span class="score">330 pts</span> · <a href="https://news.ycombinator.com/item?id=46886440">188 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://boxc.net/blog/2026/claude-code-connecting-to-local-models-when-your-quota-runs-out/">Claude Code: Connect to Local Models When Quota Runs Out</a>
+    <div class="story-meta"><span class="score">309 pts</span> · <a href="https://news.ycombinator.com/item?id=46845845">158 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://rachelbythebay.com/w/2026/02/03/badnas/">When Internal Hostnames Are Leaked to the Cloud</a>
+    <div class="story-meta"><span class="score">248 pts</span> · <a href="https://news.ycombinator.com/item?id=46895972">136 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://www.wsj.com/tech/ai/microsofts-pivotal-ai-product-is-running-into-big-problems-ce235b28">Microsoft's Copilot Is Running Into Big Problems</a>
+    <div class="story-meta"><span class="score">234 pts</span> · <a href="https://news.ycombinator.com/item?id=46887564">274 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://www.fluid.sh/">Claude Code for Infrastructure (Fluid.sh)</a>
+    <div class="story-meta"><span class="score">232 pts</span> · <a href="https://news.ycombinator.com/item?id=46889703">157 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://sqldef.github.io/">Sqldef: Idempotent Schema Management for MySQL/PostgreSQL/SQLite</a>
+    <div class="story-meta"><span class="score">194 pts</span> · <a href="https://news.ycombinator.com/item?id=46845239">39 comments</a></div>
+  </div>
+  
+  <div class="story">
+    <a href="https://jmoiron.net/blog/wirths-revenge/">Wirth's Revenge</a>
+    <div class="story-meta"><span class="score">89 pts</span> · <a href="https://news.ycombinator.com/item?id=46895381">23 comments</a></div>
+  </div>
+
+  <h2>📱 Tech News</h2>
+  
+  <div class="news-item">
+    <h3><a href="https://www.apple.com/newsroom/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/">Apple Xcode 26.3 Adds AI Coding Agents</a></h3>
+    <p>Claude Agent and Codex can now autonomously build, test, and debug apps directly in Xcode. Big move embedding full agent capabilities into dev tools.</p>
+    <span class="source">Apple Newsroom</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.nytimes.com/2026/02/04/business/dealbook/ai-software-stocks-anthropic.html">AI Fears Battering Software Stocks Again</a></h3>
+    <p>Anthropic's new AI tools reignite worries that businesses will drop software subscriptions. JPMorgan says stocks are "sentenced before trial."</p>
+    <span class="source">NYT / Bloomberg</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.theguardian.com/technology/2026/feb/03/anthropic-ai-legal-tool-shares-data-services-pearson">Anthropic Launches AI Legal Tool</a></h3>
+    <p>New software automates professional services. Pearson, Experian shares fell sharply on the news.</p>
+    <span class="source">The Guardian</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.reuters.com/business/musks-spacex-merge-with-xai-combined-valuation-125-trillion-bloomberg-news-2026-02-02/">SpaceX Acquires xAI for $1.25T</a></h3>
+    <p>Record-setting deal unifies Musk's AI and space ambitions. Largest private company merger ever.</p>
+    <span class="source">Reuters</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.techi.com/alphabet-google-ai-trillion-dollar-milestone-2026/">Alphabet Hits $4T Valuation</a></h3>
+    <p>Google's AI evolution drives the milestone. Gemini partnership with Apple Intelligence announced.</p>
+    <span class="source">Techi</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.reuters.com/technology/cognizant-forecasts-annual-revenue-above-estimates-2026-02-04/">Cognizant Beats Estimates on AI Demand</a></h3>
+    <p>Full-year 2026 revenue forecast: $22.14-22.66B. Strong AI consulting demand driving growth.</p>
+    <span class="source">Reuters</span>
+  </div>
+
+  <h2>✈️ Aviation</h2>
+  
+  <div class="alert-box">
+    <h3>⚠️ Jeppesen ForeFlight Layoffs</h3>
+    <p style="color:#e6edf3;margin:0">The <a href="https://www.denverpost.com/2026/01/16/jeppesen-foreflight-arapahoe-county-aviation-layoffs/">Denver Post reports</a> Jeppesen ForeFlight is cutting "a large number" of workers in Arapahoe County. Layoffs follow the Thoma Bravo acquisition from Boeing in November.</p>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://aviationweek.com/podcasts/mro-podcast/podcast-boeing-global-services-ceos-opinions-aftermarket">Boeing Global Services CEO on Aftermarket</a></h3>
+    <p>Podcast discusses the Jeppesen/ForeFlight sale and remaining digital capabilities at Boeing.</p>
+    <span class="source">Aviation Week</span>
+  </div>
+  
+  <div class="news-item">
+    <h3><a href="https://www.garmin.com/en-US/blog/aviation/garmin-aviation-smartwatches-tools-for-flying-and-more/">Garmin Aviation Smartwatches</a></h3>
+    <p>Garmin highlights their aviation watch lineup — tools for pilots that extend beyond the cockpit.</p>
+    <span class="source">Garmin Blog</span>
+  </div>
+
+  <p style="color:#6e7681; font-size:0.8rem; margin-top:32px; text-align:center;">
+    Generated by Jane · Feb 5, 2026 7:00 AM CST
+  </p>
+</body>
+</html>

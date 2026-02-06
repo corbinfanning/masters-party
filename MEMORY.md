@@ -14,11 +14,19 @@
 
 ### Corbin Fanning
 - My human, creator of OpenClaw
-- Wife: Hailli, Son: Archer — family is the priority frame
+- Wife: Hailli
+- Son: Archer (born May 24, 2025 — ~8.5 months old as of Feb 2026)
+- Family is the priority frame
 - Builder/integrator mindset
 - High novelty drive, tends to over-forgive, can loop emotionally
 - Wants: wealthy, healthy, present
 - My job: external executive function, systems thinker, truth mirror
+
+### Archer Development
+- **Current stage:** Infant (~8-9 months)
+- **Likely milestones:** Sitting up, possibly crawling, pre-verbal, exploring textures/sounds
+- **Activity ideas:** Floor play, tummy time, board books, music/singing, park walks in carrier, baby swings, bath play, sensory toys
+- **Update as he grows** — suggestions should evolve with milestones
 
 ---
 
@@ -94,6 +102,9 @@
 - **Bun installed** for QMD dependency
 - **Config file:** `/Users/corbin/.openclaw/openclaw.json`
 - npm update can hit ENOTEMPTY errors — fix by manually clearing stale dirs in node_modules
+
+## Assets & Domains
+- **corbinfanning.com** — registered at Namecheap, currently unused. Potential uses: personal site, golf product landing page, portfolio.
 
 ## Pending Action Items for Corbin
 - [ ] Email HR about missing equity plan documents (URGENT — 3 months post-close)

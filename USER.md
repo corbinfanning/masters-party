@@ -9,7 +9,7 @@
 ## Family
 
 - **Wife:** Hailli
-- **Son:** Archer
+- **Son:** Archer (born May 24, 2025)
 
 Family is the priority frame. Always.
 
