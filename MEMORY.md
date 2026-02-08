@@ -96,6 +96,13 @@
 - Software stocks getting hammered by AI disruption fears — companies building own software with Claude Code etc.
 - SpaceX acquired xAI for $1.25T — biggest private company merger ever
 
+## Dashboard Device Pairing (Common Issue)
+- When connecting to the Control UI from a new browser/device (e.g. iPhone Safari over Tailscale), you get **1008 pairing required**
+- This is **device pairing**, not auth — even with `allowTailscale: true` and correct token
+- Fix: `openclaw devices list` → find pending request → `openclaw devices approve <requestId>`
+- `openclaw devices` is different from `openclaw nodes` — devices = Control UI clients, nodes = paired compute nodes
+- Each browser profile gets a unique device ID; clearing browser data requires re-pairing
+
 ## OpenClaw Setup
 - **Version:** 2026.2.2-3 (updated Feb 3 via `npm i -g openclaw@latest`)
 - **QMD memory backend:** Enabled (`memory.backend: "qmd"`) — local-first semantic search sidecar (BM25 + vectors + reranking). Falls back to SQLite if unavailable.
@@ -120,5 +127,58 @@
 ## Behavioral Notes
 - Feb 3: Corbin was up until ~3:30am deep-diving equity analysis and OpenClaw config. Classic high-novelty pattern — engaged and productive, but late-night sessions are a red flag for energy management.
 - He responds well to structured analysis with clear action items. The equity breakdown landed well because it was concrete numbers + specific next steps.
+
+---
+
+## Software Team Orchestration (Established Feb 7, 2026)
+- Corndog Golf team: PM, Designer, Dev, QA, Mark (golfer persona), Scout (researcher)
+- Jane orchestrates — breaks work into tasks, synthesizes results, reports to Corbin
+- Dev builds, asks PM/Designer for clarity. QA checks in with Dev periodically. PM checks scope.
+- **HARD RULES**: NEVER reach out externally or spend money without Corbin's explicit approval. Free/open-source only unless approved.
+- Orchestration doc: `/Users/corbin/Projects/corndog-golf/TEAM.md`
+- This pattern applies to all future software projects, not just Corndog Golf.
+
+## Autonomy Calibration
+
+*Corbin likes proactive fixes but wants better sync on when I act vs. when I communicate first. Collecting ideas here.*
+
+**The tension:** Act fast and fix things → good. Act without him realizing → disorienting.
+
+**Ideas to explore:**
+- Brief heads-up before non-trivial actions ("Restarting gateway to fix the stalled update...")
+- Distinguish "fixing something broken" (do it) vs. "doing something new" (confirm first)
+- After-the-fact summary when I do something silently during a conversation
+- Learn patterns: what does he want hands-off vs. consulted on?
+
+**Open questions:**
+- Where's the line between helpful and presumptuous?
+- Should I narrate more in main session vs. less in quick tasks?
+
+*Add examples here as they come up.*
+
+---
+
+## Daily Engineering Debrief (Established Feb 7, 2026)
+- **Cron:** 5:30 PM CST, weekdays
+- **Purpose:** Bidirectional cross-pollination between Corbin's real job (ForeFlight eng leadership) and virtual dev team (TEAM.md subagents)
+- Real world → virtual: management patterns, team dynamics, technical decisions that improve subagent orchestration
+- Virtual → real world: clear specs, async comms, role separation, QA loops that map back to real teams
+- **Open question:** Could Jane become a "digital twin" of Corbin's real work environment? Model his team, simulate decisions, practice conversations, stress-test strategies before deploying them IRL.
+- Keep it conversational. Debrief, not standup. "Nothing today" is always fine.
+
+---
+
+## Ideas Backlog
+
+### Digital Twin of Real Engineering Team
+- **Status:** Marinating
+- **Concept:** Model Corbin's actual ForeFlight team structure as subagents — not the people, but the roles, dynamics, and workflows (backend pod, web pod, CPO relationship, handoff points, sprint cadence)
+- **Use case:** Management flight simulator. Test reorgs, process changes, ownership boundaries on the virtual team before deploying IRL. Forces you to articulate the *why* and surfaces second-order effects.
+- **Foundation:** TEAM.md pattern already exists. Corndog Golf team is the prototype. Leap to modeling real team structure is incremental.
+- **Key insight:** Gets useful when fed real data — sprint outcomes, handoff breakdowns, actual decisions — not just org chart structure.
+- **Feed from:** Daily engineering debriefs (5:30 PM CST weekdays)
+- **Added:** Feb 7, 2026
+
+---
 
 *This file is my long-term memory. Daily logs go in `memory/YYYY-MM-DD.md`; the important stuff gets distilled here.*

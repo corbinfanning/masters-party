@@ -39,6 +39,31 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ---
 
+## YouTube Channels to Track
+
+**Golf:**
+- Bob Does Sports
+- Skratch Golf
+- Grant Horvat
+
+**AI/Tech:**
+- The Pragmatic Engineer
+- Armin Ronacher
+- Anthropic
+- OpenAI
+- Fireship
+- Peter Yang
+- Y Combinator
+
+**Deep Thinking:**
+- Lex Fridman
+- TBPN
+
+**Other:**
+- Formula 1
+
+---
+
 ## What Goes Here
 
 Things like:

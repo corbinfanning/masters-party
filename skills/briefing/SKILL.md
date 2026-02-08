@@ -113,11 +113,13 @@ Send via message tool with `asVoice: true`.
 
 ## Audio Script Guidelines
 
-- Keep under 90 seconds
+- Keep under 90 seconds (~1200-1500 characters)
 - Use conversational language ("Looking at markets..." not "Markets:")
 - Skip URLs entirely — they're in the text version
 - Round numbers naturally ("about fifty-one degrees", "up two and a half percent")
 - Don't list all 5 HN stories — pick top 2-3 interesting ones
+- **CRITICAL: Always end with a complete sign-off sentence** (e.g. "Have a great day!" or "Enjoy your Sunday!"). If the script doesn't end with a complete sentence, it was truncated — rewrite it shorter before generating audio.
+- **After writing the audio script file, read it back** to verify it's complete and ends properly. If truncated, rewrite it.
 
 ## Delivery
 
