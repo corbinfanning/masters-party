@@ -9,31 +9,54 @@ Copy this into your project root and customize.
 
 ## Team Roles
 
-| Agent | Role | Model Tier | Responsibilities |
-|-------|------|-----------|-----------------|
-| **[Orchestrator]** | Tech Lead | Strong | Coordinates team, architectural decisions, interfaces with [Human] |
-| **PM** | Product Manager | Strong | Requirements, priorities, user stories, scope decisions |
-| **Designer** | Designer | Strong | UI/UX specs, wireframes, visual design, design reviews |
-| **Dev** | Engineer | Strong (coding) | Implementation, technical specs, builds features |
-| **QA** | QA Engineer | Mid-tier | Test plans, verification, requirements checking |
-| **Judge** | Evaluator | Strong | End-of-sprint go/no-go, quality assessment |
+| Agent | Role | Pod | Responsibilities |
+|-------|------|-----|-----------------|
+| **[Orchestrator]** | Tech Lead | — | Coordinates between pods, interfaces with [Human] |
+| **PM** | Product Manager | Planning | Requirements, functional acceptance criteria, scope |
+| **Designer** | Designer | Planning | Visual acceptance criteria, feasibility, UI review |
+| **Dev** | Engineer | Implementation | Builds features, writes code |
+| **QA** | QA Engineer | Implementation | Tests incrementally, requirements verification |
+| **Judge** | Evaluator | Independent | End-of-sprint go/no-go |
 
-## How They Work Together
+## Pods
 
-### Execution Flow
-1. Orchestrator breaks work into tasks **with acceptance criteria** and assigns to agents
-2. Every agent spawn includes **inception prompt** (role + constraints + context)
-3. Dev builds features, reaching out to PM/Designer via Orchestrator when questions arise
-4. Agents produce **structured artifacts** (specs, code, test results) — not chat summaries
-5. QA verifies against requirements at sprint close
-6. Judge makes go/no-go call before reporting to [Human]
+### Planning Pod (PM + Designer)
+- Co-spawned during sprint planning
+- PM writes functional acceptance criteria
+- Designer adds visual acceptance criteria and feasibility feedback
+- Output: sprint plan with both types of criteria
 
-### Autonomy Levels
-- **Dev**: Builds freely within spec. Must ask PM/Designer for scope/design questions.
-- **QA**: Writes and runs tests freely. Reports issues to Dev.
-- **PM/Designer**: Refine within agreed scope. Major changes go to [Human].
-- **Judge**: Advisory — Orchestrator acts on recommendations.
-- **Orchestrator**: Orchestrates freely. Major decisions go to [Human].
+### Implementation Pod (Dev + QA)
+- Dev builds features, QA tests each one incrementally
+- QA flags issues directly to Dev (no orchestrator relay needed)
+- Output: implemented + verified features
+
+### Orchestrator
+- Coordinates between pods, not individual agents
+- Handles cross-pod questions and escalations
+- Reviews Planning Pod output before handing to Implementation Pod
+
+## Communication
+
+### Within Pods — Direct
+- Pod partners communicate directly via shared artifacts
+- No orchestrator relay needed for routine questions
+
+### Between Pods — Through Orchestrator
+- Cross-pod questions go through orchestrator
+- Orchestrator passes structured artifacts, not conversation summaries
+
+### Mid-Sprint Checkpoint (~50% completion)
+- Orchestrator checks: on track? Blocked items? Priority shifts needed?
+- Quick Designer review of completed UI work
+- Adjust if needed
+
+## Autonomy Levels
+- **Dev**: Builds freely within spec. Cross-pod questions → orchestrator.
+- **QA**: Tests freely. Reports to Dev directly (same pod).
+- **PM/Designer**: Refine within agreed scope. Major changes → [Human].
+- **Judge**: Advisory — orchestrator acts on recommendations.
+- **Orchestrator**: Orchestrates freely. Major decisions → [Human].
 
 ## Hard Rules
 
@@ -44,15 +67,12 @@ Copy this into your project root and customize.
 
 ## End-of-Sprint Checklist (MANDATORY)
 
-Every sprint must end with ALL steps before reporting to [Human]:
-
 ### 1. QA Review
-- Requirements check: verify every requirement met or flagged
-- If mismatches: team huddle to resolve before sprint closes
+- Verify every acceptance criterion (functional + visual) as met or flagged
+- If mismatches: Dev + QA resolve (same pod), escalate if needed
 
 ### 2. Judge Evaluation
-- Go/no-go assessment against acceptance criteria
-- Can approve, send back, or recommend re-planning
+- Independent go/no-go against acceptance criteria
 
 ### 3. Sprint Summary One-Pager
 - Planned vs delivered, decisions, issues, judge result, what's next
@@ -62,6 +82,7 @@ Every sprint must end with ALL steps before reporting to [Human]:
 
 ### 5. Team Retrospective
 - Each agent: what worked, what didn't, what to change
+- Focus on: pod effectiveness, mid-sprint checkpoints, criteria quality
 - Synthesize into retro summary with numbered action items
 - Apply action items to this file before next sprint
 
