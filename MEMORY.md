@@ -60,11 +60,12 @@
 
 ---
 
-## Audio Briefings
+## Audio & Voice
 - Corbin likes receiving voice briefings via Telegram — news, HN, markets, weather
 - **TTS workflow:** Write text → `/Users/corbin/Library/Python/3.9/bin/edge-tts` (AndrewNeural voice) → MP3 → ffmpeg → OGG opus → send via message tool (asVoice: true)
 - Built-in `tts` tool doesn't work ("edge: undefined") — use edge-tts CLI directly
-- Consider making this a recurring feature (daily briefing)
+- **Auto-audio responses:** When Corbin sends a voice message, always respond with audio back
+- Wants real-time voice conversation eventually (like ChatGPT voice mode) — added to Ideas Backlog
 
 ## Security (Updated Feb 4)
 - `tools.elevated.allowFrom` locked to `["tg:8257556259"]` for telegram and webchat (was `["*"]` — major fix applied Feb 3)
@@ -168,7 +169,34 @@
 
 ---
 
+## Routines & Health (Established Feb 8, 2026)
+- Full daily schedule and fitness plan in `ROUTINES.md`
+- **Core commitment:** Exercise every morning, work in work hours, family time protected
+- **Physical:** 6'7", 284 lbs (down from 350), on Wegovy. Concerns: knee, back, loose skin (arms/chest/belly), sweet tooth
+- **Fitness:** 3x strength, 3x cardio (Peloton), daily yoga. Chest work 3x/week for body recomp.
+- **Equipment:** Peloton, dumbbells, bench, bike w/ baby trailer
+- **Golf:** Range 3-4x/week goal, including lunch breaks
+- **Schedule:** Office Tue/Wed/Thu, WFH Mon/Fri. Henrik 1:1 every other Mon (office). Odense block 8-10 AM daily.
+- **Dinner:** Corbin cooks M/W/F/Sat/Sun. Hailli cooks Tue/Thu. Dinner at 5:30.
+- **Archer:** Bedtime 7:30-8:30, night wake 2:30-5:30 AM (~1hr)
+- **Jane's role:** Daily planning, accountability, decision framework, tracking workout/sleep/nutrition patterns
+
 ## Ideas Backlog
+
+### Real-Time Voice Conversation Mode
+- **Status:** Research needed
+- **Concept:** Enable real-time streaming voice conversation with Jane, like ChatGPT voice mode or Siri
+- **Current state:** Telegram voice messages → transcribe → think → TTS → send back (15-30s latency)
+- **Options to explore:** OpenAI Realtime API (WebRTC, but wrong model), LiveKit + Claude bridge, Vapi/Bland.ai with custom LLM backend, Anthropic native voice (when available)
+- **Key question:** Can we get sub-2-second round-trip with Claude as the brain?
+- **Added:** Feb 8, 2026
+
+### Fidelity & Bank Account Integration
+- **Status:** Future — needs secure sandbox approach
+- **Concept:** Pull Corbin's Fidelity portfolio and bank account data into the news dashboard for real-time personal finance view
+- **Requirement:** Must run in a secure sandbox with a controlled data pipeline out — no credentials or raw financial data exposed to the main system
+- **Questions:** What sandbox tech? Docker? Separate VM? How to securely export aggregated data?
+- **Added:** Feb 8, 2026
 
 ### Digital Twin of Real Engineering Team
 - **Status:** Marinating

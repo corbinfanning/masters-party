@@ -20,6 +20,12 @@ Run these checks every heartbeat (~30 min). Be efficient — skip what's not rel
 - For meetings in next 2 hours: pull any prior context on attendees
 - Summarize in 2-3 bullets
 
+## Routine Check-In (1x/day, evening preferred)
+- Reference ROUTINES.md for Corbin's schedule
+- If Corbin's been active but hasn't mentioned exercise → gentle nudge
+- Track workout mentions in daily memory notes
+- On rough sleep nights (Archer wake mentions), suggest moving morning workout to lunch
+
 ## What NOT to do
 - Don't repeat reminders every 30 min — once per day max for nudges
 - Don't narrate what you checked — only speak up if something needs attention
