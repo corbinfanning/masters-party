@@ -111,6 +111,16 @@
 - **Config file:** `/Users/corbin/.openclaw/openclaw.json`
 - npm update can hit ENOTEMPTY errors — fix by manually clearing stale dirs in node_modules
 
+## Google Calendar Integration (Established Feb 8, 2026)
+- **Account:** corbinfanning@gmail.com
+- **Calendar:** "Jane" (ID: `8911dd3be9d63df69da23ba14adad7718c46f4221bcaa9ee2dd43ea924792f0b@group.calendar.google.com`)
+- **Source of truth** for Corbin's schedule — use `gog calendar` commands to read/write events
+- **CLI:** `gog` (v0.9.0, installed via brew)
+- **OAuth:** Desktop app credentials, project "Jane" in Google Cloud
+- **Gmail also connected** — can read/send email via `gog gmail`
+- Previously used a custom ICS server + Tailscale Funnel — deprecated in favor of Google Calendar for native iOS sync
+- Tailscale Funnel still active on `/jane.ics` path (can remove later)
+
 ## Location
 - **Home:** 6409 Zadock Woods Dr, Austin, TX
 - **Weather/activities:** Use Austin, TX for all location-based suggestions
@@ -180,6 +190,24 @@
 - **Dinner:** Corbin cooks M/W/F/Sat/Sun. Hailli cooks Tue/Thu. Dinner at 5:30.
 - **Archer:** Bedtime 7:30-8:30, night wake 2:30-5:30 AM (~1hr)
 - **Jane's role:** Daily planning, accountability, decision framework, tracking workout/sleep/nutrition patterns
+
+## The Temple Ledger
+- **What:** Personal premium news publication / daily briefing site
+- **Location:** `/Users/corbin/Projects/temple-ledger/`
+- **Serving:** `python3 -m http.server 8080` via launchd (`com.corbin.temple-ledger`)
+- **Access:** `http://corbins-mac-mini:8080` or `http://100.86.103.82:8080` (Tailscale)
+- **Design:** Dark premium newspaper aesthetic (Economist/FT vibes), Playfair Display masthead, gold/amber on navy
+- **Sections:** Editor's Note, Weather, Markets, AI/Tech, OpenClaw, HN Picks, Tech News, The 19th Hole (Fri golf)
+- **Generation:** `./generate.sh` with briefing JSON
+- **Team:** Has an Editor-in-Chief subagent, plus designer who made mockups
+- **Mockups:** 4 options in `mockups/` — Galaxy's Edge, Retro Terminal, Broadsheet, OASIS
+
+## Project: Things3 & Apple Notes Integration
+- **Status:** Backlog
+- **Goal:** Give Jane read access to Things3 tasks and Apple Notes
+- **Things3:** SQLite DB on MacBook/iPhone, not on Mac mini. Options: pair MacBook as node, iCloud sync, or Shortcuts automation to export
+- **Apple Notes:** Similar challenge — data in iCloud/local DB
+- **Added:** Feb 9, 2026
 
 ## Ideas Backlog
 

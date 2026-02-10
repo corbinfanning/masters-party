@@ -8,7 +8,7 @@
 
 1. **Exercise every morning** — non-negotiable, move it to lunch only if sleep was wrecked
 2. **Work stays in work hours** — 8:00-5:00, protect the boundaries
-3. **Family time is sacred** — 5:30-8:30 is dinner → Archer → bedtime
+3. **Family time is sacred** — 5:30-8:00 is dinner → Archer bath + bedtime
 4. **Sleep > schedule** — on rough Archer nights, adapt don't force
 5. **Consistency of pattern > perfection of any single day**
 
@@ -36,22 +36,26 @@
 
 ### Weekday — Office (Tue/Wed/Thu)
 
+**Office:** 1801 E 6th St (~30 min commute with traffic)
+
 | Time | Activity |
 |------|----------|
 | 5:00-5:30 | Wake |
 | 5:30-6:30 | Morning workout |
 | 6:30-7:15 | Shower, ready, breakfast |
-| 7:15-7:45 | Commute |
+| 7:15-7:45 | Commute to office |
 | 8:00-10:00 | Odense team block |
-| 10:00-12:00 | Deep work |
-| 12:00-1:30 | Extended lunch (golf range or walk) |
-| 1:30-5:00 | Afternoon work |
-| 5:00-5:30 | Commute |
+| 10:00-11:30 | Deep work |
+| 11:30-2:00 | **Thu:** Golf — 9 holes at Harvey Penick w/ cart (15 min drive each way) |
+| 12:00-1:30 | **Tue/Wed:** Range — Morris Williams (10 min drive, full bag incl. driver) or Harvey Penick (15 min drive, irons/short game only) |
+| 1:30/2:00-4:00 | Afternoon work |
+| 4:00-4:30 | Commute home |
 | 5:30-6:15 | Dinner (Hailli cooks Tue/Thu; Corbin cooks Wed) |
-| 6:15-7:30 | Family time |
-| 7:30-8:30 | Archer bedtime |
-| 8:30-9:30 | Personal time |
-| 9:30-10:00 | Wind down, sleep |
+| 6:15-6:30 | Family time |
+| 6:30-8:00 | Archer bath + bedtime |
+| 8:00-9:15 | Personal time |
+| 9:15-9:30 | Wind down (phone down, lights dim) |
+| 9:30-10:00 | Asleep by 10:00 |
 
 ### Weekday — WFH (Mon/Fri)
 
@@ -67,10 +71,11 @@
 | 1:30-5:00 | Afternoon work |
 | 5:00-5:30 | Dinner prep (Corbin cooks Mon/Fri) |
 | 5:30-6:15 | Dinner |
-| 6:15-7:30 | Family time |
-| 7:30-8:30 | Archer bedtime |
-| 8:30-10:00 | Personal time (extra — no commute) |
-| 10:00 | Sleep |
+| 6:15-6:30 | Family time |
+| 6:30-8:00 | Archer bath + bedtime |
+| 8:00-9:15 | Personal time (extra — no commute) |
+| 9:15-9:30 | Wind down (phone down, lights dim) |
+| 9:30-10:00 | Asleep by 10:00 |
 
 *Every other Monday → office for Henrik 1:1. Use office schedule those days.*
 
@@ -85,8 +90,10 @@
 | 1:00-3:00 | Golf (range or 9 holes, at least 1 day) |
 | 3:00-5:00 | Flexible |
 | 5:00-5:30 | Dinner prep (Corbin cooks Sat/Sun) |
-| 5:30-8:30 | Dinner → family → Archer bedtime |
-| 8:30-10:00 | Personal time |
+| 5:30-6:30 | Dinner → family time |
+| 6:30-8:00 | Archer bath + bedtime |
+| 8:00-9:30 | Personal time |
+| 9:30-10:00 | Wind down, sleep |
 
 ---
 

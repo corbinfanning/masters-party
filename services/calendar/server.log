@@ -1,0 +1,31 @@
+Jane Calendar server running on port 8099
+Jane Calendar server (HTTPS) running on port 8099
+Subscribe: https://corbins-mac-mini.taild4d485.ts.net:8099/jane.ics
+2026-02-09T01:57:44.393Z GET /jane.ics from 100.86.103.82
+2026-02-09T01:58:38.402Z GET /jane.ics from 100.99.226.23
+HTTPS on :8099
+HTTP on :8098
+2026-02-09T01:59:17.507Z GET /jane.ics from 127.0.0.1
+2026-02-09T02:04:42.669Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:21:39.211Z GET /jane.ics from 127.0.0.1
+2026-02-09T02:23:00.224Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:24:14.126Z GET /apple-touch-icon-precomposed.png from 100.99.226.23
+2026-02-09T02:24:14.128Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:24:14.133Z GET /favicon.ico from 100.99.226.23
+2026-02-09T02:24:14.134Z GET /apple-touch-icon.png from 100.99.226.23
+2026-02-09T02:24:16.164Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:24:16.169Z GET /favicon.ico from 100.99.226.23
+2026-02-09T02:24:16.171Z GET /apple-touch-icon-precomposed.png from 100.99.226.23
+2026-02-09T02:24:16.172Z GET /apple-touch-icon.png from 100.99.226.23
+2026-02-09T02:25:04.955Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:25:21.637Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:26:59.593Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:27:01.743Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:31:00.800Z GET /jane.ics from 127.0.0.1
+2026-02-09T02:31:34.622Z GET /jane.ics from 127.0.0.1
+2026-02-09T02:33:25.721Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:33:32.896Z GET /jane.ics from 100.99.226.23
+2026-02-09T02:38:20.164Z GET / from 127.0.0.1
+2026-02-09T02:40:39.212Z GET / from 127.0.0.1
+2026-02-09T02:41:34.282Z GET / from 127.0.0.1
+2026-02-09T02:42:36.507Z GET / from 127.0.0.1
