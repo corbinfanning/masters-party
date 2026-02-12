@@ -27,6 +27,98 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* === SCOREBOARD === */
+        .scoreboard-section {
+            padding: 48px 16px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .scoreboard {
+            background: #1a3c1a;
+            border: 3px solid #2a2a1a;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            max-width: 560px;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+        .scoreboard-header {
+            display: flex;
+            background: #0d260d;
+            padding: 8px 12px;
+            border-bottom: 2px solid #2a4a2a;
+        }
+        .scoreboard-header span {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #8aaa7a;
+            font-weight: bold;
+        }
+        .scoreboard-row {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-bottom: 1px solid rgba(42, 74, 42, 0.4);
+        }
+        .scoreboard-row:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        .sb-col { display: inline-block; }
+        .sb-pos {
+            width: 28px;
+            font-size: 14px;
+            color: #c8b860;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .sb-name {
+            flex: 1;
+            font-size: 14px;
+            color: #e8dcc0;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+        .sb-hole, .sb-today, .sb-total {
+            width: 52px;
+            text-align: center;
+            font-size: 14px;
+            color: #e8dcc0;
+            flex-shrink: 0;
+        }
+        .sb-yellow {
+            color: #f2c75c !important;
+        }
+        .sb-red {
+            color: #e74c3c !important;
+        }
+        .sb-dim {
+            color: #8aaa7a !important;
+            font-weight: normal;
+            font-style: italic;
+        }
+        .scoreboard-footer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 12px;
+            background: #0d260d;
+            border-top: 2px solid #2a4a2a;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #8aaa7a;
+            text-transform: uppercase;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            .scoreboard { font-size: 12px; }
+            .sb-name { font-size: 11px; letter-spacing: 0.5px; }
+            .sb-hole, .sb-today, .sb-total { width: 36px; font-size: 11px; }
+            .sb-pos { width: 22px; font-size: 12px; }
+            .scoreboard-header span { font-size: 8px; }
+            .scoreboard-footer { font-size: 7px; gap: 6px; }
+        }
+
         /* === HEADER BAR === */
         .top-bar {
             background: var(--masters-dark);
@@ -315,6 +407,74 @@
 </div>
 
 <div class="azalea-strip"></div>
+
+<!-- MASTERS SCOREBOARD -->
+<section class="scoreboard-section">
+    <div class="scoreboard">
+        <div class="scoreboard-header">
+            <span class="sb-col sb-name">PATRON</span>
+            <span class="sb-col sb-hole">HOLE</span>
+            <span class="sb-col sb-today">TODAY</span>
+            <span class="sb-col sb-total">TOTAL</span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">☆</span>
+            <span class="sb-col sb-name sb-yellow">MASTERS WATCH PARTY</span>
+            <span class="sb-col sb-hole"></span>
+            <span class="sb-col sb-today"></span>
+            <span class="sb-col sb-total"></span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">1</span>
+            <span class="sb-col sb-name">FANNING, HAILLI</span>
+            <span class="sb-col sb-hole">18</span>
+            <span class="sb-col sb-today sb-red">-8</span>
+            <span class="sb-col sb-total sb-red">-12</span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">2</span>
+            <span class="sb-col sb-name">FANNING, CORBIN</span>
+            <span class="sb-col sb-hole">16</span>
+            <span class="sb-col sb-today sb-red">-6</span>
+            <span class="sb-col sb-total sb-red">-10</span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">3</span>
+            <span class="sb-col sb-name">APRIL 13TH 2026</span>
+            <span class="sb-col sb-hole"></span>
+            <span class="sb-col sb-today"></span>
+            <span class="sb-col sb-total"></span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">4</span>
+            <span class="sb-col sb-name">ZADOCK WOODS DR</span>
+            <span class="sb-col sb-hole"></span>
+            <span class="sb-col sb-today"></span>
+            <span class="sb-col sb-total"></span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos">5</span>
+            <span class="sb-col sb-name">AUSTIN, TEXAS</span>
+            <span class="sb-col sb-hole"></span>
+            <span class="sb-col sb-today"></span>
+            <span class="sb-col sb-total"></span>
+        </div>
+        <div class="scoreboard-row">
+            <span class="sb-col sb-pos"></span>
+            <span class="sb-col sb-name sb-dim">TEE TIME 1:00 PM</span>
+            <span class="sb-col sb-hole"></span>
+            <span class="sb-col sb-today"></span>
+            <span class="sb-col sb-total"></span>
+        </div>
+        <div class="scoreboard-footer">
+            <span>PIMENTO CHEESE</span>
+            <span>·</span>
+            <span>ARNOLD PALMERS</span>
+            <span>·</span>
+            <span>AZALEA COCKTAILS</span>
+        </div>
+    </div>
+</section>
 
 <section class="hero">
     <div class="logo-mark">
