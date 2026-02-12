@@ -129,8 +129,6 @@
 - **corbinfanning.com** — registered at Namecheap, currently unused. Potential uses: personal site, golf product landing page, portfolio.
 
 ## Pending Action Items for Corbin
-- [ ] Email HR about missing equity plan documents (URGENT — 3 months post-close)
-- [ ] Find PE tax attorney re: profits interests / 83(b) / safe harbor (URGENT)
 - [ ] Enable macOS firewall (System Settings → Network → Firewall)
 - [ ] Check employment agreement for non-compete/IP/moonlighting clauses
 - [ ] Understand 2026 performance vesting triggers

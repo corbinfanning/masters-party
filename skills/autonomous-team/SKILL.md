@@ -1,6 +1,17 @@
 ---
 name: autonomous-team
-description: Spin up autonomous AI teams that run sprint cycles on a cron schedule without human initiation. Teams check a status file, pick up the next sprint, run the full cycle (planning → execution → QA → judge → retro), and report results. Use when you want continuous progress on a project without manually driving each sprint.
+description: >
+  Spin up autonomous AI teams that run sprint cycles on a cron schedule
+  without human initiation. Teams check a status file, pick up the next sprint,
+  run the full cycle (planning → execution → QA → judge → retro), and report results.
+
+  Use when: you want continuous progress on a project without manually driving
+  each sprint, you have a TEAM.md and SPEC.md ready, and the work can be broken
+  into small repeatable cycles.
+
+  Don't use when: you need a one-shot task (use sessions_spawn directly),
+  the project doesn't have a defined team structure yet (set up TEAM.md first
+  via the software-team skill), or you just want to ask a question about a project.
 ---
 
 # Autonomous Team Runner
@@ -82,6 +93,9 @@ HARD RULES:
 - Free/open-source only
 - All work stays in project folder
 - Keep sprint scope small (3-5 tasks)
+- When invoking subagent skills, be EXPLICIT: "Use the [skill-name] skill" — don't rely on fuzzy routing
+- Write all deliverables to the sprint artifacts folder (docs/sprints/sprint-N/) as the handoff boundary
+- Include negative examples in task descriptions: "Do NOT do X" when past sprints show common misfires
 ```
 
 ## Model Strategy
@@ -171,6 +185,28 @@ Jane can check on teams via:
 - Disable the cron job: `cron update --jobId <id> --patch {"enabled": false}`
 - Or let the kill switch fire
 - Active sprints will finish their current work
+
+## Best Practices (from production agent team patterns)
+
+### Write subagent prompts like SOPs, not conversations
+Each subagent prompt should be a procedure: inputs, steps, expected outputs, success criteria. Avoid vague instructions like "make it good" — specify what "good" means with templates or worked examples.
+
+### Templates and examples belong IN the skill, not the orchestrator prompt
+Don't cram report formats, code templates, or example outputs into the orchestrator's cron payload. Put them in skill files or sprint reference docs. They cost zero tokens when not invoked, and agents get them exactly when needed.
+
+### Add negative examples to reduce misfires
+When agents repeatedly make the same mistake (wrong file location, scope creep, skipping QA), add explicit "Don't do X" instructions. Glean saw a 20% accuracy recovery from adding negative examples and edge case coverage.
+
+### Artifacts are the handoff boundary
+Agents communicate through files, not conversation. Sprint folder (`docs/sprints/sprint-N/`) is the canonical artifact location. Every deliverable — plans, code, reports, reviews — gets written to disk. Other agents read from disk. The orchestrator checks disk, not memory.
+
+### Explicit skill invocation over fuzzy routing
+When determinism matters (and in autonomous teams it always matters), tell agents exactly which skill to use: "Use the software-team skill for sprint planning." Don't rely on the agent to figure out routing from descriptions alone.
+
+### Design for long runs
+- Reuse sessions where possible (same subagent continues work across steps)
+- Keep context lean — write intermediate state to files, not conversation history
+- If a sprint is taking too many turns, the orchestrator should checkpoint and resume rather than letting context degrade
 
 ## Examples
 

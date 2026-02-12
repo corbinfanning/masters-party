@@ -89,7 +89,7 @@ Things like:
 
 ### TTS
 
-- Preferred voice: "Nova" (warm, slightly British)
+- Preferred voice: "en-GB-RyanNeural" (British, authoritative)
 - Default speaker: Kitchen HomePod
 ```
 
