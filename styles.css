@@ -1,0 +1,595 @@
+/* Masters Tournament Watch Party - Styles */
+:root {
+    --masters-green: #006747;
+    --augusta-yellow: #FEDB00;
+    --azalea-pink: #FFB6C1;
+    --cream: #FFF8DC;
+    --white: #FFFFFF;
+    --dark-green: #004530;
+    --light-green: #E8F5E8;
+    --text-dark: #2C3E50;
+    --text-light: #6C7B7F;
+    --shadow: rgba(0, 103, 71, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--cream) 50%, var(--light-green) 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--masters-green);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: var(--masters-green);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        var(--masters-green) 0%,
+        var(--dark-green) 30%,
+        var(--masters-green) 70%,
+        var(--augusta-yellow) 100%
+    );
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.tournament-name {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--augusta-yellow);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.event-date {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--augusta-yellow);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hosted-by {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.countdown-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.countdown-label {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--augusta-yellow);
+}
+
+.countdown-display {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Azalea Decorations */
+.azalea-decoration {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, var(--azalea-pink) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.azalea-decoration.top-left {
+    top: 10%;
+    left: 5%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.azalea-decoration.top-right {
+    top: 15%;
+    right: 8%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+/* Augusta Skyline */
+.augusta-skyline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(
+        to top,
+        var(--dark-green) 0%,
+        var(--masters-green) 50%,
+        transparent 100%
+    );
+    clip-path: polygon(0 100%, 15% 60%, 35% 80%, 55% 40%, 75% 70%, 90% 50%, 100% 90%, 100% 100%);
+    opacity: 0.6;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 2rem 1rem;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+/* Traditions Section */
+.tradition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tradition-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.tradition-item:hover {
+    transform: translateY(-5px);
+}
+
+.tradition-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tradition-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Details Section */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.detail-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--shadow);
+    border-left: 5px solid var(--augusta-yellow);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-3px);
+}
+
+.detail-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.detail-content h3 {
+    color: var(--masters-green);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.detail-content p {
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Dress Code Section */
+.dress-guidelines {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.dress-category {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+    border-top: 4px solid var(--masters-green);
+}
+
+.dress-category h3 {
+    color: var(--masters-green);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.dress-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dress-category li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--light-green);
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.dress-category li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+}
+
+.dress-category li:last-child {
+    border-bottom: none;
+}
+
+.dress-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    background: var(--light-green);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+/* Menu Section */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.menu-category {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--shadow);
+    border: 1px solid var(--augusta-yellow);
+}
+
+.menu-category h3 {
+    color: var(--masters-green);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--augusta-yellow);
+}
+
+.menu-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-category li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-green);
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.menu-category li::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+    top: 1rem;
+}
+
+.menu-category li:last-child {
+    border-bottom: none;
+}
+
+.menu-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    background: var(--augusta-yellow);
+    color: var(--dark-green);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* RSVP Section */
+.rsvp {
+    background: linear-gradient(135deg, var(--masters-green) 0%, var(--dark-green) 100%);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 2rem 1rem;
+}
+
+.rsvp-card {
+    padding: 3rem 2rem;
+}
+
+.rsvp h2 {
+    color: var(--augusta-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.rsvp p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.rsvp-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+}
+
+.rsvp-btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rsvp-btn.primary {
+    background: var(--augusta-yellow);
+    color: var(--dark-green);
+    box-shadow: 0 5px 15px rgba(254, 219, 0, 0.3);
+}
+
+.rsvp-btn.primary:hover {
+    background: #FFE55C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(254, 219, 0, 0.4);
+}
+
+.rsvp-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.rsvp-btn.secondary:hover {
+    background: white;
+    color: var(--masters-green);
+    transform: translateY(-2px);
+}
+
+.rsvp-deadline {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 0;
+}
+
+.masters-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--augusta-yellow);
+    font-family: 'Playfair Display', serif;
+}
+
+.hosts {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hosts strong {
+    color: var(--augusta-yellow);
+    font-size: 1.2rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .tournament-name {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .event-date {
+        font-size: 1.6rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 2.5rem 1rem;
+    }
+    
+    .countdown-container {
+        padding: 1.5rem;
+    }
+    
+    .countdown-display {
+        font-size: 1.4rem;
+    }
+    
+    .details-grid,
+    .dress-guidelines,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tradition-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .rsvp-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .tournament-name {
+        font-size: 2rem;
+    }
+    
+    .hero-content {
+        max-width: 95%;
+    }
+    
+    .azalea-decoration {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .tradition-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tradition-item,
+    .detail-card,
+    .dress-category,
+    .menu-category {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.tradition-item,
+.detail-card,
+.dress-category,
+.menu-category {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
