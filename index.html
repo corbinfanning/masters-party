@@ -3,178 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Fanning Invitational - Masters Watch Party 2026</title>
+    <title>The Fanning Invitational 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMDY3NDciLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSI0IiB5PSI0Ij4KPC9zdmc+Cjwvc3ZnPgo8L3N2Zz4K">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --masters-green: #006747;
+            --masters-dark: #00513a;
+            --masters-yellow: #f2c75c;
+            --masters-gold: #d4a843;
+            --cream: #faf8f0;
+            --text-light: #e8e0d0;
+            --text-dark: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: var(--masters-green);
+            color: var(--text-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === HEADER BAR === */
+        .top-bar {
+            background: var(--masters-dark);
+            border-bottom: 1px solid rgba(242, 199, 92, 0.2);
+            padding: 12px 0;
+            text-align: center;
+        }
+        .top-bar span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--masters-yellow);
+        }
+
+        /* === HERO === */
+        .hero {
+            text-align: center;
+            padding: 80px 24px 60px;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 1px;
+            background: var(--masters-yellow);
+        }
+
+        .logo-mark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 32px;
+            position: relative;
+        }
+        .logo-mark svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(32px, 8vw, 56px);
+            color: var(--masters-yellow);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+        .hero .year {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(18px, 4vw, 28px);
+            color: var(--text-light);
+            letter-spacing: 6px;
+            opacity: 0.7;
+            margin-bottom: 32px;
+        }
+        .hero .tagline {
+            font-style: italic;
+            font-size: 16px;
+            color: var(--text-light);
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+
+        /* === SECTIONS === */
+        section {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--masters-yellow);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: var(--masters-yellow);
+            margin: 0 auto 28px;
+            opacity: 0.4;
+        }
+
+        /* === EVENT DETAILS === */
+        .details-card {
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(242, 199, 92, 0.15);
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .detail-row {
+            margin-bottom: 24px;
+        }
+        .detail-row:last-child { margin-bottom: 0; }
+
+        .detail-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--masters-yellow);
+            margin-bottom: 6px;
+        }
+        .detail-value {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+        .detail-value a {
+            color: var(--text-light);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(242, 199, 92, 0.4);
+        }
+
+        /* === COUNTDOWN === */
+        .countdown-section {
+            text-align: center;
+            padding: 40px 24px;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        .countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .countdown-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(36px, 10vw, 54px);
+            font-weight: 300;
+            color: var(--masters-yellow);
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            opacity: 0.5;
+            margin-top: 8px;
+        }
+
+        /* === MENU / ATTIRE === */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: rgba(242, 199, 92, 0.1);
+            border: 1px solid rgba(242, 199, 92, 0.15);
+        }
+        .two-col > div {
+            background: var(--masters-green);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .two-col h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--masters-yellow);
+            margin-bottom: 16px;
+        }
+        .two-col ul {
+            list-style: none;
+            font-size: 15px;
+            line-height: 2;
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 480px) {
+            .two-col { grid-template-columns: 1fr; }
+            .countdown { gap: 20px; }
+        }
+
+        /* === TRADITIONS === */
+        .traditions {
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+            color: var(--text-light);
+            opacity: 0.7;
+            line-height: 1.8;
+            padding: 48px 24px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .traditions .highlight {
+            color: var(--masters-yellow);
+            font-style: normal;
+        }
+
+        /* === RSVP === */
+        .rsvp-section {
+            text-align: center;
+            padding: 60px 24px;
+        }
+        .rsvp-btn {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--masters-green);
+            background: var(--masters-yellow);
+            padding: 16px 48px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .rsvp-btn:hover {
+            background: var(--masters-gold);
+            transform: translateY(-1px);
+        }
+        .rsvp-note {
+            font-size: 14px;
+            color: var(--text-light);
+            opacity: 0.5;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid rgba(242, 199, 92, 0.1);
+        }
+        .footer p {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            opacity: 0.3;
+        }
+
+        /* === AZALEA ACCENTS === */
+        .azalea-strip {
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                #d4487a 20%, 
+                #e86ca0 35%,
+                #f2c75c 50%,
+                #e86ca0 65%,
+                #d4487a 80%, 
+                transparent 100%
+            );
+            opacity: 0.4;
+        }
+
+        /* Subtle bg pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,80,58,1) 0%, var(--masters-green) 70%);
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="azalea-decoration top-left"></div>
-            <div class="azalea-decoration top-right"></div>
-            <div class="hero-content">
-                <h1 class="tournament-name">The Fanning Invitational</h1>
-                <div class="subtitle">A Masters Tournament Watch Party</div>
-                <div class="event-date">Sunday, April 13, 2026</div>
-                <div class="hosted-by">Hosted by Hailli & Corbin Fanning</div>
-                <div class="countdown-container">
-                    <div class="countdown-label">Time Until Tournament</div>
-                    <div id="countdown" class="countdown-display"></div>
-                </div>
-            </div>
-            <div class="augusta-skyline"></div>
-        </section>
 
-        <!-- Traditions Section -->
-        <section class="traditions">
-            <h2>Traditions Unlike Any Other</h2>
-            <div class="tradition-grid">
-                <div class="tradition-item">
-                    <div class="tradition-icon">🌸</div>
-                    <div class="tradition-text">Azalea blooms & Augusta elegance</div>
-                </div>
-                <div class="tradition-item">
-                    <div class="tradition-icon">🏆</div>
-                    <div class="tradition-text">Championship viewing experience</div>
-                </div>
-                <div class="tradition-item">
-                    <div class="tradition-icon">🥂</div>
-                    <div class="tradition-text">Signature tournament cocktails</div>
-                </div>
-                <div class="tradition-item">
-                    <div class="tradition-icon">👗</div>
-                    <div class="tradition-text">Masters-inspired attire encouraged</div>
-                </div>
-            </div>
-        </section>
+<div class="top-bar">
+    <span>A Tradition Unlike Any Other</span>
+</div>
 
-        <!-- Event Details -->
-        <section class="details">
-            <h2>Tournament Details</h2>
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">📍</div>
-                    <div class="detail-content">
-                        <h3>Location</h3>
-                        <p>Augusta at Zadock Woods<br>
-                        6409 Zadock Woods Dr<br>
-                        Austin, TX 78749</p>
-                    </div>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">⏰</div>
-                    <div class="detail-content">
-                        <h3>Tee Time</h3>
-                        <p>Coverage begins at 1:00 PM<br>
-                        Final round action starts at 2:30 PM<br>
-                        Champions dinner at 6:00 PM</p>
-                    </div>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🎪</div>
-                    <div class="detail-content">
-                        <h3>What to Expect</h3>
-                        <p>Premium viewing setup, tournament-style refreshments, and Hailli's signature party magic in a Masters-worthy setting</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="azalea-strip"></div>
 
-        <!-- Dress Code -->
-        <section class="dress-code">
-            <h2>Tournament Attire</h2>
-            <div class="dress-guidelines">
-                <div class="dress-category">
-                    <h3>Ladies</h3>
-                    <ul>
-                        <li>Sundresses in Masters green or floral prints</li>
-                        <li>Polo shirts with khakis or golf skirts</li>
-                        <li>Blazers for that "country club" feel</li>
-                        <li>Comfortable flats or low heels</li>
-                    </ul>
-                </div>
-                <div class="dress-category">
-                    <h3>Gentlemen</h3>
-                    <ul>
-                        <li>Polo shirts (green strongly encouraged)</li>
-                        <li>Khakis or golf pants</li>
-                        <li>Sport coats for extra style points</li>
-                        <li>Boat shoes or loafers</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dress-note">
-                <em>Think "Augusta National member for a day" – elevated casual with a touch of tournament tradition</em>
-            </div>
-        </section>
-
-        <!-- Food & Drink -->
-        <section class="menu">
-            <h2>Tournament Fare</h2>
-            <div class="menu-grid">
-                <div class="menu-category">
-                    <h3>Classic Augusta Cuisine</h3>
-                    <ul>
-                        <li>Legendary Pimento Cheese Sandwiches</li>
-                        <li>Masters Egg Salad on White Bread</li>
-                        <li>Georgia Peach Cobbler</li>
-                        <li>Southern-Style Shrimp & Grits</li>
-                        <li>Azalea City BBQ Sliders</li>
-                    </ul>
-                </div>
-                <div class="menu-category">
-                    <h3>Signature Beverages</h3>
-                    <ul>
-                        <li>Arnold Palmer (The King's Choice)</li>
-                        <li>Azalea Cocktail (Pink & Pretty)</li>
-                        <li>Georgia Mint Julep</li>
-                        <li>Masters Mule</li>
-                        <li>Sweet Tea & Local Brews</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="menu-note">
-                All refreshments served at Augusta National pricing... just kidding! 🍃
-            </div>
-        </section>
-
-        <!-- RSVP Section -->
-        <section class="rsvp">
-            <div class="rsvp-card">
-                <h2>Secure Your Invitation</h2>
-                <p>Limited seating available. RSVP required for this exclusive tournament viewing.</p>
-                <div class="rsvp-buttons">
-                    <a href="mailto:hailli.fanning@gmail.com?subject=The Fanning Invitational RSVP&body=I would love to attend The Fanning Invitational Masters Watch Party on April 13, 2026!%0A%0AName(s): %0ANumber of guests: %0AAnything special we should know: " class="rsvp-btn primary">
-                        RSVP by Email
-                    </a>
-                    <a href="https://forms.google.com/your-form-link" class="rsvp-btn secondary">
-                        RSVP via Form
-                    </a>
-                </div>
-                <div class="rsvp-deadline">
-                    Please respond by April 6, 2026
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="masters-quote">
-                    "A tradition unlike any other... except it's at Zadock Woods"
-                </div>
-                <div class="hosts">
-                    With love and excitement,<br>
-                    <strong>Hailli & Corbin Fanning</strong>
-                </div>
-            </div>
-        </footer>
+<section class="hero">
+    <div class="logo-mark">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flag/pin icon -->
+            <circle cx="40" cy="40" r="38" stroke="#f2c75c" stroke-width="0.5" fill="none" opacity="0.3"/>
+            <line x1="40" y1="18" x2="40" y2="62" stroke="#f2c75c" stroke-width="1"/>
+            <path d="M41 18 L58 26 L41 34Z" fill="#f2c75c" opacity="0.8"/>
+            <ellipse cx="40" cy="64" rx="8" ry="2" fill="#f2c75c" opacity="0.3"/>
+        </svg>
     </div>
+    <h1>The Fanning<br>Invitational</h1>
+    <div class="year">2 0 2 6</div>
+    <p class="tagline">You are cordially invited</p>
+</section>
 
-    <script src="script.js"></script>
+<section>
+    <div class="section-title">Event Details</div>
+    <div class="divider"></div>
+    <div class="details-card">
+        <div class="detail-row">
+            <div class="detail-label">Date</div>
+            <div class="detail-value">Sunday, April 13th, 2026</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">Time</div>
+            <div class="detail-value">1:00 PM — Until the Green Jacket Ceremony</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">The Fanning Residence<br>
+            <a href="https://maps.google.com/?q=6409+Zadock+Woods+Dr+Austin+TX+78749" target="_blank">6409 Zadock Woods Dr, Austin</a></div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">Hosted By</div>
+            <div class="detail-value">Hailli & Corbin</div>
+        </div>
+    </div>
+</section>
+
+<div class="countdown-section">
+    <div class="section-title">The Tournament Begins In</div>
+    <div class="divider"></div>
+    <div class="countdown" id="countdown">
+        <div class="countdown-unit">
+            <div class="countdown-num" id="days">--</div>
+            <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-num" id="hours">--</div>
+            <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-num" id="minutes">--</div>
+            <div class="countdown-label">Minutes</div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="two-col">
+        <div>
+            <h3>From the Clubhouse Kitchen</h3>
+            <ul>
+                <li>Pimento Cheese & Crackers</li>
+                <li>Egg Salad on White</li>
+                <li>Peach Ice Cream Sandwiches</li>
+                <li>Azalea Cocktails</li>
+                <li>Arnold Palmers</li>
+                <li>Georgia Peach Sweet Tea</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Patron Attire</h3>
+            <ul>
+                <li>Sundresses encouraged</li>
+                <li>Polos & pastels</li>
+                <li>Green is always in play</li>
+                <li>Khakis & loafers</li>
+                <li>Derby hats welcome</li>
+                <li>Comfortable & elegant</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="traditions">
+        Azaleas in bloom. The roar at Amen Corner. 
+        A <span class="highlight">Green Jacket</span> ceremony 
+        watched from our living room with good friends, 
+        great food, and cold drinks.<br><br>
+        Some traditions are worth keeping.
+    </div>
+</section>
+
+<section class="rsvp-section">
+    <div class="section-title">Kindly Respond</div>
+    <div class="divider"></div>
+    <a href="mailto:hailli.fanning@gmail.com?subject=The%20Fanning%20Invitational%20RSVP&body=We%27re%20in!%20Count%20us%20for%20____%20guests." class="rsvp-btn">RSVP Now</a>
+    <p class="rsvp-note">Please respond by April 6th</p>
+</section>
+
+<div class="azalea-strip"></div>
+
+<div class="footer">
+    <p>Augusta at Zadock Woods &nbsp;·&nbsp; Est. 2026</p>
+</div>
+
+<script>
+    function updateCountdown() {
+        const target = new Date('2026-04-13T13:00:00-05:00');
+        const now = new Date();
+        const diff = target - now;
+        
+        if (diff <= 0) {
+            document.getElementById('days').textContent = '0';
+            document.getElementById('hours').textContent = '0';
+            document.getElementById('minutes').textContent = '0';
+            return;
+        }
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+</script>
+
 </body>
 </html>
